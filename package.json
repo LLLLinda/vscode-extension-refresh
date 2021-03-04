@@ -1,0 +1,38 @@
+{
+	"name": "content-menu-item-refresh",
+	"displayName": "Refresh Explorer",
+	"publisher": "linda-cheung",
+	"description": "After installation, you can right-click explorer and click Refresh to refresh",
+	"version": "1.0.0",
+	"icon": "image/icon.png",
+	"engines": {
+		"vscode": "^1.52.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"*"
+	],
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/LLLLinda/content-menu-item-refresh.git"
+	},
+	"main": "./out/extension.js",
+	"contributes": {
+		"menus": {
+			"explorer/context": [
+				{
+					"command": "workbench.files.action.refreshFilesExplorer",
+					"group": "navigation"
+				}
+			]
+		}
+	},
+	"scripts": {
+		"build": "vsce package"
+	},
+	"devDependencies": {
+		"vsce": "^1.85.1"
+	}
+}
